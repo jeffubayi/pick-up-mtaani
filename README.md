@@ -7,12 +7,7 @@
 
 ![screenshot](public/images/image_processing20220419-31825-1yzr3x9.png)
 
-**pick-up-mtaani** is a free landing page template built on top of Material UI and fully coded in **React**.
-Simple & light is designed to provide all the basic components using the `sx` prop for a developer need to create landing page for Online delivery of product.
-
-## Live Demo
-
-Take a look the live demo here 👉 [https://pickup-mtaani.vercel.app/](https://pickup-mtaani.vercel.app/)
+**pick-up-mtaani** is an e-commerce logistics landing page template built on top of Material UI and fully coded in **React**.
 
 ## Getting Started
 

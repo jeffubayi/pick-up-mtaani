@@ -3,12 +3,14 @@ import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import { styled } from '@mui/material/styles'
+import { useTheme } from '@mui/material/styles'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import CircularProgress from '@mui/material/CircularProgress'
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'
 import { data } from './feature.data'
 import ReactPlayer from 'react-player'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 interface LinearProgressProps {
   order: number
@@ -37,6 +39,8 @@ const BorderLinearProgress = styled(LinearProgress, {
 }))
 
 const HomeFeature: FC = () => {
+  const { breakpoints } = useTheme()
+  const matchMobileView = useMediaQuery(breakpoints.down('md'))
   return (
     <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
       <Container>
@@ -44,10 +48,13 @@ const HomeFeature: FC = () => {
           <Grid item xs={12} md={5}>
             <Box sx={{ position: 'relative' }}>
               {/* <Image src="/images/home-hero.jpg" width={650} height={678} quality={97} alt="Feature img" /> */}
-              {/* <iframe style="position: absolute; top: 0; left: 0;" */}
-              {/* <iframe src="https://youtu.be/FiVP88uLfi4" width="100%" height="100%"  ></iframe> */}
-              <ReactPlayer style={{borderRadius:"10px"}}url='https://new.pickupmtaani.com/static/media/services.0b739cfbd44d144fc36a.mp4' width={500} height={500} playing={true}
-                loop={true} />
+              <ReactPlayer
+                url='https://new.pickupmtaani.com/static/media/services.0b739cfbd44d144fc36a.mp4'
+                width={matchMobileView ? 360 :500}
+                height={matchMobileView ? 360 :500}
+                playing={true}
+                loop={true}
+              />
               {/* <Box
                 sx={{
                   position: 'absolute',

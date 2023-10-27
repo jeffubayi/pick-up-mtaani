@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
+import  { Chip } from '@mui/material'
 import ArrowForward from '@mui/icons-material/ArrowForward'
 import { Course } from '@/interfaces/course'
 
@@ -56,17 +57,15 @@ const CourseCardItem: FC<Props> = ({ item }) => {
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center',gap:0.3 }}>
-            <Typography variant="h3" color="primary.main">
-              { item.price + ""}
-            </Typography>
+            <Chip label={ item.price + ""} color="primary"/>
             <Typography variant="caption"> Ksh</Typography>
           </Box>
-          <IconButton
+          {/* <IconButton
             color="primary"
             sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
           >
-            <ArrowForward />
-          </IconButton>
+            100
+          </IconButton> */}
         </Box>
       </Box>
     </Box>

@@ -6,10 +6,11 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
+import CountUp from 'react-countup';
 
 interface Exp {
   label: string
-  value: string
+  value: number
 }
 interface ExpItemProps {
   item: Exp
@@ -18,15 +19,15 @@ interface ExpItemProps {
 const exps: Array<Exp> = [
   {
     label: 'Deliveries',
-    value: '10K+',
+    value: 1000,
   },
   {
     label: 'Mtaani Agents',
-    value: '50+',
+    value: 30,
   },
   {
     label: 'Businesses',
-    value: '100+',
+    value: 100,
   },
 ]
 
@@ -37,7 +38,7 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
       <Typography
         sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
       >
-        {value}
+        <CountUp start={0} end={value} delay={4}></CountUp>{'+'}
       </Typography>
       <Typography color="text.secondary" variant="h5">
         {label}

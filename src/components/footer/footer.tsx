@@ -16,7 +16,6 @@ const Footer: FC = () => {
           <Grid item xs={12} md={5}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Avatar src="/images/light-logo.png" sx={{ mb: 1 }} />
-
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
                 Pickup mtaani is an online logistics platform that is trusted by online sellers and buyers since the COVID pandemic until now.
               </Typography>
@@ -31,7 +30,7 @@ const Footer: FC = () => {
       <Typography variant="body2" align="center" sx={{ mt: 2 }}>
         {'Copyright © '}
         <Link color="primary" href="https://github.com/jeffubayi">
-          jeffubayi
+          Bazenga Digital
         </Link>{""}{' All rights reserved '}
         {'.'}
       </Typography>
